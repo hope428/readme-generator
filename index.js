@@ -38,7 +38,8 @@ const questions = [
   {
     type: 'input',
     message: 'What license does your project use?',
-    name: 'license'
+    name: 'license',
+    choices: []
   }
 ];
 
