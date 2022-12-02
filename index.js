@@ -35,16 +35,26 @@ const questions = [
     message: "What are the testing instructions?",
     name: "testing",
   },
+  {
+    type: 'input',
+    message: 'What license does your project use?',
+    name: 'license'
+  }
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    const markdown = generateMarkdown(data)
+    fs.writeFile(fileName, markdown, (err)=>{
+        err ? console.log(err) : console.log("Success!")
+    })
+}
 
 // TODO: Create a function to initialize app
 function init() {
   inquirer
     .prompt(questions)
-    .then((response) => generateMarkdown);
+    .then((response) => writeToFile('README.md', response));
 }
 
 // Function call to initialize app
