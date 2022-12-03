@@ -37,7 +37,7 @@ function renderLicenseLink(license) {
         break;
     }
 
-    return `[${data.license} License](https://choosealicense.com/licenses/${licenseName})`;
+    return `[${license} License](https://choosealicense.com/licenses/${licenseName})`;
   }
 }
 
@@ -48,9 +48,9 @@ function renderLicenseSection(license) {
     return "";
   } else {
     return `
-    ## License
+## License
 
-    ${renderLicenseLink(license)}
+${renderLicenseLink(license)}
     `;
   }
 }

@@ -36,7 +36,7 @@ const questions = [
     name: "testing",
   },
   {
-    type: 'input',
+    type: 'checkbox',
     message: 'What license does your project use?',
     name: 'license',
     choices: ['Apache License 2.0', 'GNU GPLv3', 'MIT', 'ISC', 'GNU GPLv2']
