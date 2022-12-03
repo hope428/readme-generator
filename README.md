@@ -1,36 +1,29 @@
 
-# cool app
+# readme-generator
+
+<img src="https://img.shields.io/badge/license-ISC-9cf"/>
 
 ## Description
-it's cool
+This app was built with the npm inquirer package. It takes the user through a series of prompts to fill out a high-quality readme file. 
 
 ## Table of Contents
-- [Installation](#installation)
 - [Usage](#usage)
-- [Credits](#credits)
+- [License](#license)
 - [License](#license)
 
 ## Installation
-clone repo, npm install
+To install this application, git clone
 
 ## Usage 
-run in terminal
-
-## Credits
-undefined
+[Link to github repo](https://github.com/hope428/readme-generator)
 
 
-    ## License
+## License
 
-    ![!]()
+[MIT License](https://choosealicense.com/licenses/mit)
     
 
 ## Questions
 [Contact me on Github](https://github.com/hope428)<br/>
-[Email me](mailto:lvforsythe95@gmail.com)
+[Email me at lvforsythe95@gmail.com](mailto:lvforsythe95@gmail.com)
 
-## How to Contribute
-n/a
-
-## Tests
-n/a

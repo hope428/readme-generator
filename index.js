@@ -36,10 +36,10 @@ const questions = [
     name: "testing",
   },
   {
-    type: 'checkbox',
+    type: 'list',
     message: 'What license does your project use?',
     name: 'license',
-    choices: ['Apache License 2.0', 'GNU GPLv3', 'MIT', 'ISC', 'GNU GPLv2']
+    choices: ['Apache License 2.0', 'GNU GPLv3', 'MIT', 'ISC', 'GNU GPLv2', 'None']
   },
   {
     type: 'input',
@@ -70,7 +70,7 @@ function writeToFile(fileName, data) {
 function init() {
   inquirer
     .prompt(questions)
-    .then((response) => writeToFile('README.md', response));
+    .then((response) => writeToFile('sample-README.md', response));
 }
 
 // Function call to initialize app

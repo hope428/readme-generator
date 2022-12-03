@@ -4,40 +4,30 @@ function renderLicenseBadge(license) {
   if (!license) {
     return "";
   } else {
-    return `<img src="https://img.shields.io/badge/license-${license}-9cf"/>`
+    return `<img src="https://img.shields.io/badge/license-${license}-9cf"/>`;
   }
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  let licenseName;
   if (!license) {
     return "";
   } else {
     switch (license) {
       case "Apache License 2.0":
-        licenseName = "apache-2.0";
-        break;
-
+        return `[${license} License](https://choosealicense.com/licenses/apache-2.0)`;
       case "GNU GPLv3":
-        licenseName = "gpl-3.0";
-        break;
-
+        return `[${license} License](https://choosealicense.com/licenses/gpl-3.0)`;
       case "MIT":
-        licenseName = "mit";
-        break;
-
+        return `[${license} License](https://choosealicense.com/licenses/mit)`;
       case "ISC":
-        licenseName = "isc";
-        break;
-
+        return `[${license} License](https://choosealicense.com/licenses/isc)`;
       case "GNU GPLv2":
-        licenseName = "gpl-2.0";
-        break;
+        return `[${license} License](https://choosealicense.com/licenses/gpl-2.0)`;
+      case "None":
+        return `This project does not use a license`;
     }
-
-    return `[${license} License](https://choosealicense.com/licenses/${licenseName})`;
   }
 }
 
@@ -49,7 +39,6 @@ function renderLicenseSection(license) {
   } else {
     return `
 ## License
-
 ${renderLicenseLink(license)}
     `;
   }
@@ -70,6 +59,8 @@ ${data.description}
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
+- [Questions](#questions)
+- [Tests](#tests)
 
 ## Installation
 ${data.installation}
@@ -86,7 +77,7 @@ ${renderLicenseSection(data.license)}
 [Contact me on Github](https://github.com/${data.username})<br/>
 [Email me at ${data.email}](mailto:${data.email})
 
-## How to Contribute
+## Contributing
 ${data.contribution}
 
 ## Tests
