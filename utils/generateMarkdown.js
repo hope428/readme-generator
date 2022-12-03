@@ -51,12 +51,13 @@ ${data.installation}
 ${data.usage}
 
 ## Credits
-${data.credts}
+${data.credits}
 
 ${renderLicenseSection(data.license)}
 
 ## Questions
-![Contact me on Github](https://github.com/${data.username})
+[Contact me on Github](https://github.com/${data.username})<br/>
+[Email me at ${data.email}](mailto:${data.email})
 
 ## How to Contribute
 ${data.contribution}
