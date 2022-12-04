@@ -4,7 +4,7 @@ function renderLicenseBadge(license) {
   if (!license) {
     return "";
   } else {
-    return `<img src="https://img.shields.io/badge/license-${license}-9cf"/>`;
+    return `<img src="https://img.shields.io/badge/License-${license}-9cf"/>`;
   }
 }
 
@@ -31,15 +31,24 @@ function renderLicenseLink(license) {
   }
 }
 
+function renderLicenseTOC(license){
+  if(license === "None"){
+    return "";
+  } else {
+    return `- [License](#license)`
+  }
+}
+
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  if (!license) {
+  if (license === "None") {
     return "";
   } else {
     return `
 ## License
-${renderLicenseLink(license)}
+${renderLicenseLink(license)}<br/>
+This project uses the ${license} license
     `;
   }
 }
@@ -58,7 +67,7 @@ ${data.description}
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
-- [License](#license)
+${renderLicenseTOC(data.license)}
 - [Questions](#questions)
 - [Tests](#tests)
 
