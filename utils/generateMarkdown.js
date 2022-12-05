@@ -1,11 +1,9 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  if (!license) {
-    return "";
-  } else {
-    return `<img src="https://img.shields.io/badge/License-${license}-9cf"/>`;
-  }
+  return license === "None"
+    ? ""
+    : `<img src="https://img.shields.io/badge/License-${license}-9cf"/>`;
 }
 
 // TODO: Create a function that returns the license link
@@ -31,12 +29,8 @@ function renderLicenseLink(license) {
   }
 }
 
-function renderLicenseTOC(license){
-  if(license === "None"){
-    return "";
-  } else {
-    return `- [License](#license)`
-  }
+function renderLicenseTOC(license) {
+  return license === "None" ? "" : `- [License](#license)`;
 }
 
 // TODO: Create a function that returns the license section of README
